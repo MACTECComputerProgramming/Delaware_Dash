@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody playerRb;
     public float speed = 50;
-    public float horizontalInput;
-    public float verticalInput;
+    private float horizontalInput;
+    private float verticalInput;
     public Vector3 playerPos;
-    
+    public bool gameOver = false;
 
 
 
