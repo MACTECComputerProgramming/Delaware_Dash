@@ -13,8 +13,8 @@ public class SpawnerScript : MonoBehaviour
 
     void Start()
     {
-        //Invoke("SpawnObstacle", 1);
-        InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
+        Invoke("SpawnObstacle", 1);
+        //InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
         //playerControllerScript =
             //GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
@@ -28,10 +28,10 @@ public class SpawnerScript : MonoBehaviour
 
     void SpawnObstacle()
     {
-        if (IceScript.hasBounced == false)
-        {
+        //if (IceScript.hasBounced == false)
+        //{
             Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
-        }
+        //}
     }
 
 

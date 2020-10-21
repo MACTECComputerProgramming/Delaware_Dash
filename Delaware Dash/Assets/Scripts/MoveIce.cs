@@ -27,6 +27,10 @@ public class MoveIce : MonoBehaviour
             GoLeft();
         }
     }
+    void OnCollisionEnter(collider collide)
+    {
+        hasBounced = true;
+    }
 
     void GoRight()
     {
