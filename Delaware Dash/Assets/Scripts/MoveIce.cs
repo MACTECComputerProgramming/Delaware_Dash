@@ -27,9 +27,12 @@ public class MoveIce : MonoBehaviour
             GoLeft();
         }
     }
-    void OnCollisionEnter(collider collide)
+    private void OnCollisionEnter(Collider col)
     {
-        hasBounced = true;
+        if (col.gameObject.CompareTag("Wall")) 
+        {
+           hasBounced = true;
+        } 
     }
 
     void GoRight()
