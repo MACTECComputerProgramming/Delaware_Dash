@@ -30,7 +30,7 @@ public class SpawnerScript : MonoBehaviour
     {
         //if (IceScript.hasBounced == false)
         //{
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            Instantiate(obstaclePrefab, transform.position, obstaclePrefab.transform.rotation);
         //}
     }
 
