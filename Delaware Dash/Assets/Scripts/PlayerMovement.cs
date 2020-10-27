@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     public Vector3 playerPos;
     public bool gameOver = false;
-
+    
 
 
     void Start()
@@ -24,8 +24,24 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        playerRb.AddForce(transform.forward * speed * horizontalInput * Time.deltaTime);
-        playerRb.AddForce(transform.right * -speed * verticalInput * Time.deltaTime);
+        if (!gameOver)
+        {
+            playerRb.AddForce(transform.forward * speed * horizontalInput * Time.deltaTime);
+            playerRb.AddForce(transform.right * -speed * verticalInput * Time.deltaTime);
+        }
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ice"))
+        {
+            Destroy(gameObject);
+            gameOver = true;
+        }
+    }
+    public void OpenMenu()
+    {
+
+    }
+
 }

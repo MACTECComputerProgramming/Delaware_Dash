@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - WallL
   - WallR
+  - Ice
   layers:
   - Default
   - TransparentFX
