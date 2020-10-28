@@ -8,24 +8,30 @@ public class MoveIce : MonoBehaviour
     public float speed = 500;
     public Rigidbody iceRb;
     public bool hasBounced = false;
+    public bool isSecondPrefab = false;
 
 
 
     void Start()
     {
-        iceRb = GetComponent<Rigidbody>();   
+        iceRb = GetComponent<Rigidbody>();
+        if (!isSecondPrefab)
+        {
+            hasBounced = true;
+        }
     }
 
     void Update()
     {
         if (!hasBounced)
         {
-            GoRight();
+        GoRight();
         }
         if (hasBounced)
         {
             GoLeft();
         }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -39,7 +45,12 @@ public class MoveIce : MonoBehaviour
             hasBounced = false;
 
         }
-        
+        if (collision.gameObject.CompareTag("Ice"))
+        {
+            if (!hasBounced) { hasBounced = true; }
+            if (hasBounced) { hasBounced = false;}
+            
+        }
     }
 
     void GoRight()

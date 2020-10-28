@@ -4,19 +4,37 @@ using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
-    public Vector3 spawnPos = new Vector3(25, 0, 0);
+
+
+    public GameObject[] icePrefab;
+    public GameObject spawnerPrefab;
+    public int spawnRangeLow = -30;
+    public int spawnRangeHigh = -400;
+    public float xRange = 35;
+    public int spawnerNum = 50;
+      
+
+    
     private float startDelay = 2;
     private float repeatRate = 2;
-    private MoveIce IceScript;
+    
+
+
+
 
 
     void Start()
     {
-        Invoke("SpawnObstacle", 1);
-        //InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
-        //playerControllerScript =
-            //GameObject.Find("Player").GetComponent<PlayerMovement>();
+        while (spawnerNum > 0)
+        {
+            Invoke("SpawnSpawner", 0);
+            spawnerNum--;
+        }
+        
+        Invoke("SpawnIce", 1);
+        //InvokeRepeating("SpawnIce", startDelay, repeatRate);
+        
+        
     }
 
     
@@ -26,13 +44,24 @@ public class SpawnerScript : MonoBehaviour
         
     }
 
-    void SpawnObstacle()
+    void SpawnIce()
     {
-        //if (IceScript.hasBounced == false)
-        //{
-            Instantiate(obstaclePrefab, transform.position, obstaclePrefab.transform.rotation);
-        //}
+        Vector3 spawnPos = new Vector3
+        (/*Random.Range(spawnRangeLow, spawnRangeHigh)*/transform.position.x, 0, Random.Range(-xRange, xRange));
+
+        int iceIndex = Random.Range(0, icePrefab.Length);
+        Instantiate(icePrefab[iceIndex], spawnPos, icePrefab[iceIndex].transform.rotation);
+        
     }
 
+    
+    void SpawnSpawner() 
+    {
+        Vector3 spawnPos = new Vector3
+        (Random.Range(spawnRangeLow, spawnRangeHigh), 0, Random.Range(-xRange, xRange));
+        //int animalIndex = Random.Range(0, animalPrefabs.Length); 
+        Instantiate(spawnerPrefab, spawnPos, spawnerPrefab.transform.rotation);
+    }
+   
 
 }

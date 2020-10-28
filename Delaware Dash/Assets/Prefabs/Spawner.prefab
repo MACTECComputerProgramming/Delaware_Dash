@@ -43,6 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85e8f94960c7484bb6b9728de15828b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: -927199367670048503, guid: 917e07a18fc7f454f8651fc0f53fd6c5,
-    type: 3}
+  icePrefab:
+  - {fileID: 5297189968177215281, guid: 79ac75146ad89104fb514365d3398583, type: 3}
+  - {fileID: 5297189968177215281, guid: 8e2dda1d24d7edd46a938817847d10db, type: 3}
+  spawnerPrefab: {fileID: 5480280563236380619}
   spawnPos: {x: 3, y: 0, z: 0}
+  spawnRangeLow: -30
+  spawnRangeHigh: -400
+  xRange: 35
