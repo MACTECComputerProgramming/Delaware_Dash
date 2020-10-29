@@ -48,7 +48,7 @@ public class MoveIce : MonoBehaviour
         if (collision.gameObject.CompareTag("Ice"))
         {
             if (!hasBounced) { hasBounced = true; }
-            if (hasBounced) { hasBounced = false;}
+            else if (hasBounced) { hasBounced = false;}
             
         }
     }
