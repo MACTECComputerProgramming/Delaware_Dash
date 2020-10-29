@@ -25,7 +25,7 @@ public class SpawnerScript : MonoBehaviour
 
     void Start()
     {
-        while (spawnerNum > 0)
+        while (spawnerNum > 1)
         {
             Invoke("SpawnSpawner", 0);
             spawnerNum--;
