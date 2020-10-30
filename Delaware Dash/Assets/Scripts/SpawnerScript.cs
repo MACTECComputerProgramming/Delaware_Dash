@@ -8,32 +8,35 @@ public class SpawnerScript : MonoBehaviour
 
     public GameObject[] icePrefab;
     public GameObject spawnerPrefab;
+    public GameObject redCoatPrefab;
     public int spawnRangeLow = -30;
     public int spawnRangeHigh = -400;
     public float xRange = 35;
     public int spawnerNum = 50;
+    public bool isRedCoatSpawner = false;
       
 
     
     private float startDelay = 2;
     private float repeatRate = 2;
-    
-
-
-
-
+    public float spawnRangeHighEnd = -490;
+    public float spawnRangeLowEnd = -480;
 
     void Start()
     {
-        while (spawnerNum > 1)
+        if (!isRedCoatSpawner)
         {
-            Invoke("SpawnSpawner", 0);
-            spawnerNum--;
+            while (spawnerNum > 1)
+            {
+                Invoke("SpawnSpawner", 0);
+                spawnerNum--;
+            }
+
+            Invoke("SpawnIce", 0);
         }
-        
-        Invoke("SpawnIce", 1);
         //InvokeRepeating("SpawnIce", startDelay, repeatRate);
-        
+
+        if (isRedCoatSpawner) { Invoke("SpawnRedCoat", 0); }
         
     }
 
@@ -63,5 +66,10 @@ public class SpawnerScript : MonoBehaviour
         Instantiate(spawnerPrefab, spawnPos, spawnerPrefab.transform.rotation);
     }
    
+    void SpawnRedCoat()
+    {
+        Vector3 spawnPos = new Vector3(Random.Range(spawnRangeHighEnd, spawnRangeLowEnd), 0, Random.Range(-xRange, xRange));
+        Instantiate(redCoatPrefab, spawnPos, redCoatPrefab.transform.rotation);
+    }
 
 }
