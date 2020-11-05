@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -38,9 +39,14 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ice"))
         {
             lives--;
-            if (lives < 1)
-            { Destroy(gameObject);gameOver = true; }
             Destroy(collision.gameObject);
+            if (lives < 1)
+            { 
+                //Destroy(gameObject);
+                gameOver = true;
+                SceneManager.LoadScene(0);
+            }
+            
             
         }
     }

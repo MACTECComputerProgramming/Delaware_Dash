@@ -5,6 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneScripts : MonoBehaviour
 {
+    private bool paused = false;
+
+    
+    public void Update()
+    {
+        if (paused)
+        {
+            Time.timeScale = 0;
+        }
+        else if (!paused)
+        {
+            Time.timeScale = 1;
+        }
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
@@ -13,9 +28,17 @@ public class SceneScripts : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("QUIT!");
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 
+    public void PauseGame()
+    {
+        paused = true;
+    }
 
+    public void ResumeGame()
+    {
+        paused = false;
+    }
 }
