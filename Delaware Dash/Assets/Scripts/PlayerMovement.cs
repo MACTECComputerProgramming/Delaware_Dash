@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             { 
                 //Destroy(gameObject);
                 gameOver = true;
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(3);
             }
             
             

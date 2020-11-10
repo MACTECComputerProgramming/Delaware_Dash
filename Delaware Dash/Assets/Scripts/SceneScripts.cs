@@ -20,6 +20,11 @@ public class SceneScripts : MonoBehaviour
         }
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
@@ -28,7 +33,7 @@ public class SceneScripts : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("QUIT!");
-        //UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 
@@ -41,4 +46,10 @@ public class SceneScripts : MonoBehaviour
     {
         paused = false;
     }
+
+    public void LoseGame()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 }
