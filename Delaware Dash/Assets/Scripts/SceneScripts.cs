@@ -33,7 +33,7 @@ public class SceneScripts : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("QUIT!");
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 

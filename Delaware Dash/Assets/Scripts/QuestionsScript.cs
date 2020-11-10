@@ -8,32 +8,37 @@ public class QuestionsScript : MonoBehaviour
 
     public Rigidbody playerRb;
     public GameObject[] Question;
-   
+    private SceneScripts sceneScripts;
+    public bool pause = false;
 
     
     void Update()
     {
-        
+        if (pause)  { Time.timeScale = 0; }
+        if (!pause) { Time.timeScale = 1; }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ice"))
         {
-            spawnQuestion();
-            Time.timeScale = 0;
+            Invoke("spawnQuestion", 0);
         }
 
     }
     
     void spawnQuestion()
     {
-            int qIndex = Random.Range(0, Question.Length);
-            Vector3 spawnPos = new Vector3(0,0,0);
-            Instantiate(Question[qIndex], spawnPos, Question[qIndex].transform.rotation);
+        pause = true;
+        int qIndex = Random.Range(0, Question.Length);
+        Vector3 spawnPos = new Vector3(0,0,0);
+        Instantiate(Question[qIndex], spawnPos, Question[qIndex].transform.rotation);
     }
    
-    
+    public void pauseFalse()
+    {
+        pause = false;
+    }
     
 
 

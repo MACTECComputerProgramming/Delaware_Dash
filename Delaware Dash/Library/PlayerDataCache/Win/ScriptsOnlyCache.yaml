@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - FollowPlayer
     - MoveIce
     - PlayerMovement
+    - QuestionsScript
     - SceneScripts
     - SpawnerScript
     - WinScript
@@ -45,17 +46,39 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 11180}
+    - Class: 114
+      Script: {instanceID: 11380}
+    - Class: 114
+      Script: {instanceID: 11768}
+    - Class: 114
+      Script: {instanceID: 12362}
+    - Class: 114
+      Script: {instanceID: 12442}
+    - Class: 114
+      Script: {instanceID: 12560}
+    - Class: 114
+      Script: {instanceID: 12622}
+    - Class: 114
+      Script: {instanceID: 12976}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/GameScreen.unity:
     - Class: 1
@@ -91,31 +114,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 11738}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12362}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12442}
+    - Class: 114
+      Script: {instanceID: 12560}
+    - Class: 114
+      Script: {instanceID: 12622}
     - Class: 114
       Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12912}
+    - Class: 114
+      Script: {instanceID: 12976}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -160,31 +189,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11792}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12362}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12442}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12560}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 12770}
-    - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12976}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,21 +248,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12362}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12442}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12560}
+    - Class: 114
+      Script: {instanceID: 12622}
+    - Class: 114
+      Script: {instanceID: 12976}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -253,6 +284,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -295,6 +332,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: cf8006f9e5e4fd4be363d18819691e37
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuestionsScript
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -499,12 +542,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -727,4 +764,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameScreen.unity
   - Assets/Scenes/WinScreen.unity
   - Assets/Scenes/GameOverScreen.unity
-  playerPath: C:/Users/Larsonian/Desktop/Built delaware dash/Delaware Dash.exe
+  playerPath: C:/Users/Larsonian/Documents/Built delaware dash/Delaware Dash.exe
