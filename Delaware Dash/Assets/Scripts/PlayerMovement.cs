@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     public Vector3 playerPos;
     public bool gameOver = false;
-    public int lives = 3;
+    public int lives = 1;
+    private ScoreCounter scoreCounterScript;
 
 
 
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
             playerRb.AddForce(transform.right * -speed * verticalInput * Time.deltaTime);
         }
         if(transform.position.x < -480) { transform.position = new Vector3(-473, transform.position.y, transform.position.z); }
+        InvokeRepeating("scoreCounterScript.IncreaseScore", 0, 0);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -50,9 +52,6 @@ public class PlayerMovement : MonoBehaviour
             
         }
     }
-    public void OpenMenu()
-    {
 
-    }
-
+   
 }
