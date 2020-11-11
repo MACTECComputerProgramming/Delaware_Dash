@@ -4,7 +4,9 @@ ScriptsOnlyBuild:
     - FollowPlayer
     - MoveIce
     - PlayerMovement
+    - QuestionsScript
     - SceneScripts
+    - ScoreCounter
     - SpawnerScript
     - WinScript
     Unity.Rider.Editor.dll:
@@ -19,6 +21,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.ButtonEditor
+    - UnityEditor.UI.ImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -45,17 +50,45 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 11320}
+    - Class: 114
+      Script: {instanceID: 11352}
+    - Class: 114
+      Script: {instanceID: 11392}
+    - Class: 114
+      Script: {instanceID: 11780}
+    - Class: 114
+      Script: {instanceID: 12158}
+    - Class: 114
+      Script: {instanceID: 12376}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12574}
+    - Class: 114
+      Script: {instanceID: 12636}
+    - Class: 114
+      Script: {instanceID: 12990}
+    - Class: 114
+      Script: {instanceID: 22688}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/GameScreen.unity:
     - Class: 1
@@ -91,31 +124,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11780}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12766}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12768}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -160,31 +193,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11780}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12390}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12770}
-    - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,21 +252,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11780}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12574}
+    - Class: 114
+      Script: {instanceID: 12636}
+    - Class: 114
+      Script: {instanceID: 12990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -295,6 +330,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: dccee1a2b73e4a5d872ea292c39a9d7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuestionsScript
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -721,10 +762,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b4599d19b7150d09e6947c9b3c9937a2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreCounter
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScreen.unity
   - Assets/Scenes/WinScreen.unity
   - Assets/Scenes/GameOverScreen.unity
-  playerPath: C:/Users/Larsonian/Desktop/Built delaware dash/Delaware Dash.exe
+  playerPath: C:/Users/Larsonian/Documents/Built delaware dash/Delaware Dash.exe

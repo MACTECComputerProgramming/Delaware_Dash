@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneScripts : MonoBehaviour
 {
     private bool paused = false;
+    private ScoreCounter scoreCounterScript;
 
     
     public void Update()
@@ -18,6 +19,12 @@ public class SceneScripts : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+        scoreCounterScript.score = 0;
     }
 
     public void PlayGame()
@@ -40,5 +47,15 @@ public class SceneScripts : MonoBehaviour
     public void ResumeGame()
     {
         paused = false;
+    }
+
+    public void LoseGame()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene(2);
     }
 }
